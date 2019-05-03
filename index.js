@@ -2,11 +2,7 @@ const Discord = require("discord.js");
 const { promisify } = require("util");
 const readdir = promisify(require("fs").readdir);
 const client = new Discord.Client();
-const fs = require("fs");
 client.config = require("./config.js");
-const moment = require('moment');
-var mp3Duration = require('mp3-duration');
-const broadcast = client.createVoiceBroadcast();
 
 process.on('uncaughtException', function (err) {
      client.channels.get("571260960820690955").send(`ERROR: ` + err);

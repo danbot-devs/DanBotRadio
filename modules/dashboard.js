@@ -113,8 +113,6 @@ module.exports = (client) => {
     const currentlyplaying = currentlyplaying0.song
     const durationmins = currentlyplaying0.durationmins
     const durationsecs = currentlyplaying0.durationsecs
-    const os = require('os');
-    var cpu = os.loadavg();
     const duration = currentlyplaying0.duration
     const execSync = require('child_process').execSync;
     const up = execSync('uptime -p').toString();
