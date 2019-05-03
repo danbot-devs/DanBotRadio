@@ -1,0 +1,8 @@
+node_modules
+.git
+data
+package-lock.json
+config.js
+.env
+Music
+song.json

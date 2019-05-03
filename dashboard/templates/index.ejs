@@ -1,0 +1,20 @@
+<%- include('blocks/header', {bot:bot, user: user}) %>
+<div class="jumbotron">
+    <div class="col-sm-8 mx-auto">
+      
+      <div class="container">
+        
+      <h1><%= bot.user.username %></h1><% if (bot.user.avatarURL) { %></div><% } %>
+      <p><%= bot.user.username %> will play mixed pop music in a voice channel on your server!</p>
+      <p>There is <%= indexstats.filesinfolder %> songs with a folder size of <%= indexstats.foldersize %></p>
+      <p>Playing music in <%= indexstats.voiceconnections %> guilds.</p>
+      <p></p>
+      <p>Current song stats:<br> Currently playing: <%= indexstats.currentlyplaying %><br> Current playtime: <%= indexstats.durationmins %>:<%= indexstats.durationsecs %> <br> Song length: <%= indexstats.duration %></p>
+      <p>
+        <a class="btn btn-primary" href="/commands" role="button"><i class="fa fa-fw fa-book" aria-hidden="true"></i> Bot Commands »</a>
+      </p>
+        </div>
+    </div>
+  </div>
+
+<% include ./blocks/footer %>
