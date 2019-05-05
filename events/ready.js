@@ -8,10 +8,18 @@ module.exports = async(client, message) => {
     }, 60000);
     require("../modules/dashboard")(client); 
 
-    //Console Log for startup.
+    const timestamp = `${moment().format("YYYY-MM-DD HH:mm:ss")}`;
+let startEmbed = new Discord.RichEmbed()
+.setTitle(`${client.user.username} Started!`)
+.setColor("#53f23e")
+.addField("__**Time:**__", `${timestamp}`, true)
+.addField("__**Total Members:**__", `${client.guilds.reduce((p, c) => p + c.memberCount, 0)}`, true)
+.addField("__**Total Guilds:**__", `${client.guilds.size}`, true)
+.addField("__**Total Channels:**__", `${client.channels.size}`, true)
+client.channels.get("571260960820690955").send(startEmbed);
+
+
     client.channels.get("552513647545679885").send('!DBR!nextsong')
-    const timestamp = `[${moment().format("YYYY-MM-DD HH:mm:ss")}]:`;
-    client.channels.get("571260960820690955").send(`${timestamp} ${client.user.tag}, ${client.guilds.reduce((p, c) => p + c.memberCount, 0)} users, in ${client.channels.size} channels of ${client.guilds.size} servers.`);
 
     fs.readdir("./commands/", (err, files) => {
       if (err) return client.channels.get("571260960820690955").send(err);
