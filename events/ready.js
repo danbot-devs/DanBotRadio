@@ -1,5 +1,6 @@
 const moment = require('moment');
 const fs = require('fs');
+const Discord = require("discord.js");
 module.exports = async(client, message) => {
     //Dashboard Owner Sync
     client.appInfo = await client.fetchApplication();
