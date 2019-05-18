@@ -68,5 +68,10 @@ exports.run = (client, message, args) => {
                       .then(connection => {
                       const dispatcher = connection.playBroadcast(broadcast);
                       });
+                  //DanBot Support Server
+                  client.channels.get("578889228944146432").join()
+                  .then(connection => {
+                  const dispatcher = connection.playBroadcast(broadcast);
+                  });
                     })
     };
