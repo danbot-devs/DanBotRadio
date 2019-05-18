@@ -1,4 +1,3 @@
-const { version, MessageEmbed, MessageAttachment} = require("discord.js");
 const Discord = require('discord.js');
 const { HighChartsConstructor } = require("chart-constructor");
 const moment = require("moment");
