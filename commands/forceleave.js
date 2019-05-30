@@ -9,4 +9,6 @@ exports.run = (client, message, args) => {
     client.channels.get("569999540929691658").leave();
     client.channels.get("570249480897822732").leave();
     client.channels.get("571251077693964306").leave();
+    client.channels.get("578889228944146432").leave();
+    client.channels.get("574331554197667861").leave();
 };

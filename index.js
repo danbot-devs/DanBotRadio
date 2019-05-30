@@ -19,8 +19,9 @@ const init = async () => {
   });
 
 
-
+const fs = require('fs')
 client.on('message', message => {
+
     const prefix = "!DBR!"
     if (message.content.indexOf(prefix) !== 0) return;
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
@@ -35,6 +36,8 @@ client.on('message', message => {
                     return;
              }
     }  
+
+
 })
 
   client.login(client.config.token);
