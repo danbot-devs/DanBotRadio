@@ -31,7 +31,7 @@
     "http": "0.0.0",
     "level": "^5.0.1",
     "level-session-store": "^2.2.0",
-    "marked": "^0.6.2",
+    "marked": "^1.1.1",
     "mem-stat": "^1.0.5",
     "moment": "^2.24.0",
     "moment-duration-format": "^2.2.2",
